@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/dogicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./js/dogBreedList.js"></script>
+    <script type="text/javascript" src="./js/imageDogBreed.js"></script>
+    <title>SeeADog</title>
+</head>
+<body>
+    <header>
+        <h3>Escolha a raça de um cachorro e veja uma foto!</h3>
+    </header>
+    <main>
+        <div class="container">
+            <div class="h">
+                <select id="dogList">
+                    <option>Escolha Aqui</option>
+                </select>
+                <div class="line"></div>
+                <button id="chooseDog" onclick="generateDogImage()">Buscar!</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="size-img">
+                <div id="dogImage"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p id="copy">jnsgdm&copy;2022</p>
+        </div>
+    </footer>
+</body>
+<script>
+    const dogImg = document.getElementById('dogImage')
+    const sizeImg = document.querySelector(".size-img")
+    if(dogImg.style.backgroundImage === ''){
+        sizeImg.hidden = true
+        dogImg.hidden = true
+    }
+</script>
+</html>
